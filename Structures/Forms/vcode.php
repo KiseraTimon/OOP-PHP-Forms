@@ -24,12 +24,10 @@ class verification
         if (isset($_SESSION['vcode']))
         {
             $setcode = $_SESSION['vcode'];
-            echo 'Verification code sent : '.$setcode;
         }
         else
         {
             $setcode = null;
-            echo 'Verification code not set : '.$setcode;
         }
         ?>
             <div class="ver-body">

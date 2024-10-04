@@ -12,7 +12,7 @@ class login
         <head>
             <title>Login</title>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-            <link rel="stylesheet" href="../../styles/signup.css">
+            <link rel="stylesheet" href="/assets/css/signup.css">
         </head>
         <body>
         <?php

@@ -26,24 +26,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         exit;
     }
 
-    // Check if uname or email exists
-    $sql = "SELECT * FROM users WHERE uname = '$uname' OR email = '$email'";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    $user = $stmt->fetch();
-
-    if ($user != null)
-    {
-        echo
-        "
-        <script>
-            alert('Username or Email already exists');
-            window.history.back();
-        </script>
-        ";
-        exit;
-    }
-
     // Password Hashing
     $password = password_hash($password, PASSWORD_DEFAULT);
 

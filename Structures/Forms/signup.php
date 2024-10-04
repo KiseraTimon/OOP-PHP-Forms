@@ -47,6 +47,11 @@ class signupform
                         id="confirmpassword" class="form-control" placeholder="Confirm Password">
                     </div>
                 </div>
+                <div class="form-row">
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </div>
             </form>
         <?php
     }

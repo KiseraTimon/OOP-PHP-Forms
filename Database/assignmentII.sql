@@ -12,7 +12,9 @@ CREATE TABLE users
 );
 
 ALTER TABLE users
-ADD COLUMN vercode INT NOT NULL AFTER email;
+ADD COLUMN vcode INT AFTER email;
 
 ALTER TABLE users
 ADD COLUMN timestamp TIMESTAMP NOT NULL AFTER vercode;
+
+-- DROP TABLE users;

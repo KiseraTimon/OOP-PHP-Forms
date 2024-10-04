@@ -52,6 +52,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 
+    // Session variables
+    session_start();
+
+    // Fetching userID
+    $sql = "SELECT userID FROM users WHERE uname = '$uname'";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $user = $stmt->fetch();
+    $userID = $user['userID'];
+
+    $_SESSION['userID'] = $userID;
+    $_SESSION['fname'] = $fname;
+    $_SESSION['lname'] = $lname;
+    $_SESSION['uname'] = $uname;
+    $_SESSION['email'] = $email;
+
+    // Generating unique verification code
+    $vcode = rand(100000, 999999);
+    $_SESSION['vcode'] = $vcode;
+
     // Message
     echo
     "

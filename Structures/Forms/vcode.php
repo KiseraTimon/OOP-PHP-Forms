@@ -33,7 +33,7 @@ class verification
         }
         ?>
             <div class="ver-body">
-                <form method="POST" action="http://localhost:5000/Components/verifier.php" enctype="multipart/form-data">
+                <form method="POST" action="http://localhost:5000/Components/codeverify.php" enctype="multipart/form-data">
                     <!--Verification Code-->
                     <div class="form-row">
                         <div class="col">

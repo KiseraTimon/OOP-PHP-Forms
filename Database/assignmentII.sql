@@ -8,13 +8,6 @@ CREATE TABLE users
     lname VARCHAR(30) NOT NULL,
     uname VARCHAR(20) NOT NULL,
     email VARCHAR(50) NOT NULL,
+    vcode INT,
     password VARCHAR(255) NOT NULL
 );
-
-ALTER TABLE users
-ADD COLUMN vcode INT AFTER email;
-
-ALTER TABLE users
-ADD COLUMN timestamp TIMESTAMP NOT NULL AFTER vercode;
-
--- DROP TABLE users;

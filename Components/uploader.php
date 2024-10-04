@@ -69,7 +69,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $_SESSION['email'] = $email;
 
     // Generating unique verification code
+    $senderemail = 'timonkisera10@gmail.com';
+    $senderpassword = 'ivjrmwsvpdjykcuo';
     $vcode = rand(100000, 999999);
+
+    $_SESSION['senderemail'] = $senderemail;
+    $_SESSION['senderpassword'] = $senderpassword;
     $_SESSION['vcode'] = $vcode;
 
     // Message
@@ -77,7 +82,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     "
     <script>
         alert('User Registered Successfully');
-        window.location.href = 'http://localhost:5000/Pages/verify.php';
+        window.location.href = 'http://localhost:5000/PHPmailer/PHPmailer/mail.php';
     </script>
     ";
 }

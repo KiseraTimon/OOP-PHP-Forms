@@ -1,0 +1,12 @@
+CREATE DATABASE assignmentII;
+USE assignmentII;
+
+CREATE TABLE users
+(
+	userID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(30) NOT NULL,
+    lname VARCHAR(30) NOT NULL,
+    uname VARCHAR(20) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);

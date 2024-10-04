@@ -23,16 +23,17 @@ class users
     public function tables()
     {
         // Fetching connection file
-        
         require_once(__DIR__.'\..\..\Components\connection.php');
 
-        // Fetching data from database
+        // Fetching data from database into a row
         $sql = "SELECT * FROM users";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $users = $stmt->fetchAll();
 
-        //Assigning data to variables
+        ?>
+        <!--Bootstrap Table-->
+        <?php
         $count = 1;
         foreach ($users as $user)
         {
@@ -40,9 +41,7 @@ class users
             $lname = $user['lname'];
             $uname = $user['uname'];
             $email = $user['email'];
-
             ?>
-            <!--Bootstrap Table-->
             <table class="table">
                 <thead>
                     <tr>
@@ -55,7 +54,7 @@ class users
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><?php echo $count; ?></th>
+                        <td><?php echo $count; ?></td>
                         <td><?php echo $fname; ?></td>
                         <td><?php echo $lname; ?></td>
                         <td><?php echo $uname; ?></td>
@@ -65,11 +64,6 @@ class users
             </table>
             <?php
             $count++;
-        }
-
-        if ($users == null)
-        {
-            echo "<h1>No Users Registered</h1>";
         }
     }
 }

@@ -3,9 +3,31 @@
 // Composing signup form in PHP class
 class signupform
 {
+    // Signup form header
+    public function signupHeader()
+    {
+        ?>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Join Us Today</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                <link rel="stylesheet" href="/styles/signup.css">
+            </head>
+            <body>
+                
+            </body>
+            </html>
+        <?php
+    }
+
+    // Signup form body
     public function signUpForm()
     {
         ?>
+        <div class="signup-body">
             <!--Bootstrap Form-->
             <form method="POST" action="http://localhost:5000/Components/uploader.php" enctype="multipart/form-data">
                 <!--First name and Last name-->
@@ -53,6 +75,7 @@ class signupform
                     </div>
                 </div>
             </form>
+        </div>
         <?php
     }
 }

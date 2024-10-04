@@ -9,12 +9,12 @@ if (isset($conn) && $conn)
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         // Prepared variables for data insertion
-        $fname = $mysqli->real_escape_string($_POST['fname']);
-        $lname = $mysqli->real_escape_string($_POST['lname']);
-        $uname = $mysqli->real_escape_string($_POST['uname']);
-        $email = $mysqli->real_escape_string($_POST['email']);
-        $password = $mysqli->real_escape_string($_POST['password']);
-        $confirmpassword = $mysqli->real_escape_string($_POST['confirmpassword']);
+        $fname = ($_POST['fname']);
+        $lname = ($_POST['lname']);
+        $uname = ($_POST['uname']);
+        $email = ($_POST['email']);
+        $password = ($_POST['password']);
+        $confirmpassword = ($_POST['confirmpassword']);
 
         // Checking if passwords match
         if ($password != $confirmpassword)

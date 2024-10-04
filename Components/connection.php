@@ -5,10 +5,13 @@ $username = "root";
 $password = "timonkisera123456_";
 $dbname = "assignmentII";
 
+//Data Source Name (DSN)
+$dsn = "mysql:host=$servername;dbname=$dbname";
+
 // Create Connection
 try
 {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO($dsn, $username, $password);
 
     // PDO Error Mode
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

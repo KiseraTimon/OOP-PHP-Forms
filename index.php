@@ -6,45 +6,20 @@
     <title>Signup Form</title>
 </head>
 <body>
-    <!--Bootstrap Form-->
-    <form>
-        <!--First name and Last name-->
-        <div class="form-row">
-            <div class="col">
-                <input type="text" id="fname" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <input type="text" id="lname" class="form-control" placeholder="Last name">
-            </div>
-        </div>
+    <!--Verifying Connection-->
+    <?php
+        // Fetching connection file
+        require_once ('Components/connection.php');
 
-        <!--Username-->
-        <div class="form-row">
-            <div class="col">
-                <input type="text" id="uname" class="form-control" placeholder="Username">
-            </div>
-        </div>
-
-        <!--Email-->
-        <div class="form-row">
-            <div class="col">
-                <input type="email" id="email" class="form-control" placeholder="Email">
-            </div>
-        </div>
-
-        <!--Password-->
-        <div class="form-row">
-            <div class="col">
-                <input type="password" id="password" class="form-control" placeholder="Password">
-            </div>
-        </div>
-
-        <!--Confirm Password-->
-        <div class="form-row">
-            <div class="col">
-                <input type="password" id="confirmpassword" class="form-control" placeholder="Confirm Password">
-            </div>
-        </div>
-    </form>
+        // Validating connection
+        if (isset($conn) && $conn)
+        {
+            echo "<h1>Connection Achieved</h1>";
+        }
+        else
+        {
+            echo "<h1>Connection Failed</h1>";
+        }
+    ?>
 </body>
 </html>

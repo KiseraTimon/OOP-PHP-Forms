@@ -23,4 +23,3 @@ catch(PDOException $e)
         alert('Connection Failed: ' . $errMessage);
         </script>";
 }
-?>

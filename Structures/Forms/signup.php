@@ -7,42 +7,44 @@ class signupform
     {
         ?>
             <!--Bootstrap Form-->
-            <form>
+            <form method="POST" action="http://localhost:5000/Components/uploader.php" enctype="multipart/form-data">
                 <!--First name and Last name-->
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" id="fname" class="form-control" placeholder="First name">
+                        <input type="text" name="fname" id="fname" class="form-control" placeholder="First name">
                     </div>
                     <div class="col">
-                        <input type="text" id="lname" class="form-control" placeholder="Last name">
+                        <input type="text" name="lname" id="lname" class="form-control" placeholder="Last name">
                     </div>
                 </div>
 
                 <!--Username-->
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" id="uname" class="form-control" placeholder="Username">
+                        <input type="text" name="uname" id="uname" class="form-control" placeholder="Username">
                     </div>
                 </div>
 
                 <!--Email-->
                 <div class="form-row">
                     <div class="col">
-                        <input type="email" id="email" class="form-control" placeholder="Email">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                     </div>
                 </div>
 
                 <!--Password-->
                 <div class="form-row">
                     <div class="col">
-                        <input type="password" id="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
                     </div>
                 </div>
 
                 <!--Confirm Password-->
                 <div class="form-row">
                     <div class="col">
-                        <input type="password" id="confirmpassword" class="form-control" placeholder="Confirm Password">
+                        <input type="password"
+                        name="confirmpassword"
+                        id="confirmpassword" class="form-control" placeholder="Confirm Password">
                     </div>
                 </div>
             </form>

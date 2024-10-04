@@ -46,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     "
     <script>
         alert('Login Successful');
-        window.location.href = 'http://localhost:5000/Structures/Tables/users.php';
+        window.location.href = 'http://localhost:5000/Pages/userspage.php';
     </script>
     ";
 }

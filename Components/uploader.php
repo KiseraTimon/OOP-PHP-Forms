@@ -26,6 +26,24 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         exit;
     }
 
+    // Checking if uname or email exists
+    $sql = "SELECT * FROM users WHERE uname = '$uname' OR email = '$email'";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $user = $stmt->fetch();
+
+    if ($user != null)
+    {
+        echo
+        "
+        <script>
+            alert('Username or Email already exists');
+            window.history.back();
+        </script>
+        ";
+        exit;
+    }
+
     // Password Hashing
     $password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -39,7 +57,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     "
     <script>
         alert('User Registered Successfully');
-        window.location.href = 'http://localhost:5000/Structures/Forms/signup.php';
+        window.location.href = 'http://localhost:5000/Pages/userspage.php';
     </script>
     ";
 }

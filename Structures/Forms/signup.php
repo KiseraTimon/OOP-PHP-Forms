@@ -76,7 +76,7 @@ class signupform
                 </div>
                 <div class="form-row">
                     <div class="col">
-                        <p>Already a member?<a href="#"> Sign in</a></p>
+                        <p>Already a member?<a href="../../Pages/loginpage.php"> Sign in</a></p>
                     </div>
                 </div>
             </form>

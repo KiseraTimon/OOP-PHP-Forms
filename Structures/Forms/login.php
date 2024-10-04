@@ -44,6 +44,11 @@ class login
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p>New here?<a href="../../index.php"> Sign up</a></p>
+                    </div>
+                </div>
             </form>
         </div>
         <?php

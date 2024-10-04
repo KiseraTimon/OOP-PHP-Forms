@@ -77,7 +77,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     "
     <script>
         alert('User Registered Successfully');
-        window.location.href = 'http://localhost:5000/Pages/userspage.php';
+        window.location.href = 'http://localhost:5000/Pages/verify.php';
     </script>
     ";
 }

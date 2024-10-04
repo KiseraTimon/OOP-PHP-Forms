@@ -14,30 +14,30 @@ class verification
         </head>
         <body>
         <?php
+    }
+
+    public function verify()
+    {
         // Session start
         session_start();
 
         if (isset($_SESSION['vcode']))
         {
-            $vcode = $_SESSION['vcode'];
-            echo 'Verification code sent';
+            $setcode = $_SESSION['vcode'];
+            echo 'Verification code sent : '.$setcode;
         }
         else
         {
-            $vcode = null;
-            echo 'Verification code not set';
+            $setcode = null;
+            echo 'Verification code not set : '.$setcode;
         }
-    }
-
-    public function verify()
-    {
         ?>
             <div class="ver-body">
                 <form method="POST" action="http://localhost:5000/Components/verifier.php" enctype="multipart/form-data">
                     <!--Verification Code-->
                     <div class="form-row">
                         <div class="col">
-                            <input type="hidden" name="setcode" id="setcode" class="form-control" value="<?php echo $vcode;?>">
+                            <input type="hidden" name="setcode" id="setcode" class="form-control" value="<?php echo $setcode;?>">
                             <input type="number" name="vcode" id="vcode" class="form-control" placeholder="Verification Code">
                         </div>
                     </div>

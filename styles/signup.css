@@ -8,6 +8,16 @@
     transform: translate(0, 100%);
 }
 
+.login-body
+{
+    background-color: #f1f1f1;
+    padding: 10px;
+    max-width: 70%;
+    min-width: 300px;
+    margin: 0 auto;
+    transform: translate(0, 200%);
+}
+
 .form-row
 {
     margin: 10px;

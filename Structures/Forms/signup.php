@@ -74,6 +74,11 @@ class signupform
                         <button type="submit" class="btn btn-primary">Sign Up</button>
                     </div>
                 </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p>Already a member?<a href="#"> Sign in</a></p>
+                    </div>
+                </div>
             </form>
         </div>
         <?php
